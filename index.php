@@ -14,17 +14,31 @@
 		<script type="text/javascript">
 			function login()
 			{
-				alert($("#NombreUsuario").val());
+				//alert($("#NombreUsuario").val());
 
-				$("#error").val("Usted no esta en nuestra base de datos.");
+				var miNombre = $("#usuario").val();
+				var miClave = $("#clave").val();
 
-				$.ajax({url:"ValidarUsuario.php", success: function(resultado)
+				$.ajax({url:"ValidarUsuario.php",
+				type:"post",
+				data:
+				{
+					nombre:miNombre,
+					clave:miClave
+				},
+				success: function(resultado)
 				{
 					if (resultado) 
-					{alert("Bienvenido");}
+					{
+						alert("Bienvenido");
+						location.href="menu.php";
+					}
 					else
-					{alert("MMMMMMMM")}
-				} });
+					{
+						alert("No es un usuario registrado");
+					}
+				}//Fin success
+				});//Fin parametros ajax
 			}
 		</script>
 
@@ -33,8 +47,9 @@
 	<body>
 		<div class="CajaCha animated bounceInLeft">
 			<form id="formulario" method="post" action="destino.php">
-				<input type="text" name="usuario" placeholder="<?php echo isset($_COOKIE['ultimousuario']) ? $_COOKIE['ultimousuario'] : 
+				<input type="text" name="usuario" id="usuario" placeholder="<?php echo isset($_COOKIE['ultimousuario']) ? $_COOKIE['ultimousuario'] : 
 				'Ingrese usuario' ?>">
+				<input type="password" name="clave" id="clave" placeholder="Ingrese clave">
 				<!-- <button type="submit" style="height:5em;" class="MiBotonUTN" onclick="location.href='menu.php'">Ingresar</button> -->
 
 				<input type="button" style="height:5em;" class="MiBotonUTN" onclick="login()" value="Login"></button>
