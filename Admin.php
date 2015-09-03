@@ -1,7 +1,7 @@
 <?php 
 	
-	require_once('Resultado.php');
-	require_once('AccesoDatos.php');
+	require_once('Entidades/Resultado.php');
+	require_once('Entidades/AccesoDatos.php');
 
 	$resobj = new Resultado();
 

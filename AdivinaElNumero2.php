@@ -5,8 +5,8 @@
 		<title>Curso Ingreso UTN FRA</title>
 
 		<!--Estilos-->
-		<link rel="stylesheet" type="text/css" href="estilo.css">
-		<link rel="stylesheet" type="text/css" href="animacion.css">
+		<link rel="stylesheet" type="text/css" href="CSS/estilo.css">
+		<link rel="stylesheet" type="text/css" href="CSS/animacion.css">
 		<!--final de Estilos-->
 
 		<!--Lógica-Programación-->
@@ -77,5 +77,11 @@
 			<input type="hidden" name="usuario" value="<?php echo $_SESSION['UsuarioRegistrado']; ?>">
 			<input type="hidden" name="resultado" id="resultado">
 		</form>
+
+
+
+		<div class="Cajita animated bounceInUp" align="right" style="width:88%; margin-top:-15%; position:relative">
+			<a class="MiBotonUTNLinea" align="right" onclick="location.href='Sesion/logout.php'">Cerrar Sesión</a>
+		</div>
 	</body>
 </html>

@@ -5,8 +5,8 @@
 		<title>Menu Principal</title>
 
 		<!--Estilos-->
-		<link rel="stylesheet" type="text/css" href="estilo.css">
-		<link rel="stylesheet" type="text/css" href="animacion.css">
+		<link rel="stylesheet" type="text/css" href="CSS/estilo.css">
+		<link rel="stylesheet" type="text/css" href="CSS/animacion.css">
 		<!--final de Estilos-->
 
 		<?php  
@@ -22,15 +22,18 @@
 
 	<body>
 		<div class="CajaCha animated bounceInLeft">
-				<button style="height:5em;" class="MiBotonUTN" onclick="location.href='AdivinaElNumero2.php'">Adivina el Numero</button>
+			<button style="height:5em;" class="MiBotonUTN" onclick="location.href='AdivinaElNumero2.php'">Adivina el Numero</button>
 
-				<button style="height:5em;" class="MiBotonUTN" onclick="location.href='PiedarPapelTijera2.php'">Piedra Papel o Tijera</button>
+			<button style="height:5em;" class="MiBotonUTN" onclick="location.href='PiedraPapelTijera2.php'">Piedra Papel o Tijera</button>
 
-				<button style="height:5em;" class="MiBotonUTN" onclick="location.href='ReflejosDaltonicos1.php'">Reflejos Daltonicos</button>
+			<button style="height:5em;" class="MiBotonUTN" onclick="location.href='ReflejosDaltonicos1.php'">Reflejos Daltonicos</button>
+		</div>
 
-				<div class="CajaAbajo animated bounceInUp">
-					<a class="MiBotonUTNLinea" onclick="location.href='logout.php'">Cerrar Sesión</a>	
-				</div>
+
+
+
+		<div class="Cajita animated bounceInUp" align="right" style="width:88%; margin-top:10%; position:relative">
+			<a class="MiBotonUTNLinea" align="right" onclick="location.href='Sesion/logout.php'">Cerrar Sesión</a>	
 		</div>
 	</body>
 </html>

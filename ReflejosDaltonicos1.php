@@ -5,8 +5,8 @@
 		<title>Curso Ingreso UTN FRA</title>
 
 		<!--Estilos-->
-		<link rel="stylesheet" type="text/css" href="estilo.css">
-		<link rel="stylesheet" type="text/css" href="animacion.css">
+		<link rel="stylesheet" type="text/css" href="CSS/estilo.css">
+		<link rel="stylesheet" type="text/css" href="CSS/animacion.css">
 		<!--final de Estilos-->
 
 		<!--Lógica-Programación-->
@@ -42,42 +42,35 @@
 			<button  style="background:red;" class="MiBotonUTNJuego animated swing shake" onclick="Responder('rojo')" >rojo</button>
 			<button  style="background:Pink;" class="MiBotonUTNJuego animated hinge"  >Rosa</button>
 		</div>
+
+
 		<div class="CajaUno animated bounceInLeft">
-			
-
-			
-			
-		
-			
-
-
 		</div>
+
 
 		<div class="CajaEnunciado animated bounceInLeft">
 			<h2>Enunciado:</h2>
-			
 				<h3>
 						En la pantalla se mostrarán 6 botones de distintos colores,  al comenzar el juego se mostrara el texto de un color entre los 6 posibles para que el jugador sepa que botón tocar .Al tocar el botón correcto se informara cuanto tiempo tardo.
-
-
 				</h3>
-			
-			
 		</div>
+
 
 		<div class="CajaAbajo animated bounceInUp">
 			<a style=" margin-top: -10%;" class="MiBotonUTNLinea" onclick="location.href='menu.php'" >Men&uacute; ejercicios</a>	
 		</div>
 
-
-
-
-
-
+		<!-- Formulario con info para BD -->
 		<form name="FrmResultados" method="post" action="Admin.php">
 			<input type="hidden" name="juego" value="<?php echo basename($_SERVER['PHP_SELF']); ?>">
 			<input type="hidden" name="usuario" value="<?php echo $_SESSION['UsuarioRegistrado']; ?>">
 			<input type="hidden" name="resultado" id="resultado">
 		</form>
+		<!-- FIN Formulario con info para BD -->
+
+
+		<div class="Cajita animated bounceInUp" align="right" style="width:88%; margin-top:-15%; position:relative">
+			<a class="MiBotonUTNLinea" align="right" onclick="location.href='Sesion/logout.php'">Cerrar Sesión</a>
+		</div>
 	</body>
 </html>

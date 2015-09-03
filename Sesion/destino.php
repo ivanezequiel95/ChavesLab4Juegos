@@ -9,6 +9,5 @@
 
 	$_SESSION['UsuarioRegistrado'] = $_POST["usuario"];
 
-	header("location:menu.php");
-
+	header("location:../menu.php");
 	?>

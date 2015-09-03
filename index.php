@@ -5,8 +5,8 @@
 		<title>Menu Principal</title>
 
 		<!--Estilos-->
-		<link rel="stylesheet" type="text/css" href="estilo.css">
-		<link rel="stylesheet" type="text/css" href="animacion.css">
+		<link rel="stylesheet" type="text/css" href="CSS/estilo.css">
+		<link rel="stylesheet" type="text/css" href="CSS/animacion.css">
 		<!--final de Estilos-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
@@ -19,7 +19,7 @@
 				var miNombre = $("#usuario").val();
 				var miClave = $("#clave").val();
 
-				$.ajax({url:"ValidarUsuario.php",
+				$.ajax({url:"Sesion/ValidarUsuario.php",
 				type:"post",
 				data:
 				{
@@ -46,7 +46,7 @@
 
 	<body>
 		<div class="CajaCha animated bounceInLeft">
-			<form id="formulario" method="post" action="destino.php">
+			<form id="formulario" method="post" action="Sesion/destino.php">
 				<input type="text" name="usuario" id="usuario" placeholder="<?php echo isset($_COOKIE['ultimousuario']) ? $_COOKIE['ultimousuario'] : 
 				'Ingrese usuario' ?>">
 				<input type="password" name="clave" id="clave" placeholder="Ingrese clave">
